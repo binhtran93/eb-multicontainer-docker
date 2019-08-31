@@ -1,0 +1,117 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "project",
+      "host": {
+        "sourcePath": "/var/app/current/project"
+      }
+    },
+    {
+      "name": "nginx-proxy-conf",
+      "host": {
+        "sourcePath": "/var/app/current/proxy/conf.d"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "project",
+      "image": "360118472363.dkr.ecr.us-west-2.amazonaws.com/laravel:latest",
+      "essential": true,
+      "memory": 128,
+      "mountPoints": [
+        {
+          "sourceVolume": "project",
+          "containerPath": "/var/www/html"
+        }
+      ],
+      "environment": [
+        {
+          "name": "DB_CONNECTION",
+          "value": "mysql"
+        },
+        {
+          "name": "DB_HOST",
+          "value": "database"
+        },
+        {
+          "name": "DB_PORT",
+          "value": "3307"
+        },
+        {
+          "name": "DB_DATABASE",
+          "value": "ebdocker-db"
+        },
+        {
+          "name": "DB_USERNAME",
+          "value": "binh"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "value": "123456789"
+        }
+      ]
+    },
+    {
+      "name": "database",
+      "image": "mysql:5.7",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 3307,
+          "containerPort": 3306
+        }
+      ],
+      "environment": [
+        {
+          "name": "DB_DATABASE",
+          "value": "ebdocker-db"
+        },
+        {
+          "name": "DB_USERNAME",
+          "value": "binh"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "value": "123456789"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "123456789"
+        }
+      ]
+    },
+    {
+      "name": "nginx-proxy",
+      "image": "nginx",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": [
+        "project"
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "project",
+          "containerPath": "/var/www/html"
+        },
+        {
+          "sourceVolume": "nginx-proxy-conf",
+          "containerPath": "/etc/nginx/conf.d",
+          "readOnly": true
+        },
+        {
+          "sourceVolume": "awseb-logs-nginx-proxy",
+          "containerPath": "/var/log/nginx"
+        }
+      ]
+    }
+  ]
+}
