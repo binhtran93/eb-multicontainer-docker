@@ -18,7 +18,7 @@
     {
       "name": "project",
       "image": "360118472363.dkr.ecr.us-west-2.amazonaws.com/laravel:latest",
-      "essential": false,
+      "essential": true,
       "memory": 128,
       "mountPoints": [
         {
@@ -54,39 +54,9 @@
       ]
     },
     {
-      "name": "database",
-      "image": "mysql:5.7",
-      "essential": false,
-      "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 3307,
-          "containerPort": 3306
-        }
-      ],
-      "environment": [
-        {
-          "name": "DB_DATABASE",
-          "value": "ebdocker-db"
-        },
-        {
-          "name": "DB_USERNAME",
-          "value": "binh"
-        },
-        {
-          "name": "DB_PASSWORD",
-          "value": "123456789"
-        },
-        {
-          "name": "MYSQL_ROOT_PASSWORD",
-          "value": "123456789"
-        }
-      ]
-    },
-    {
       "name": "nginx-proxy",
       "image": "nginx",
-      "essential": false,
+      "essential": true,
       "memory": 128,
       "portMappings": [
         {
