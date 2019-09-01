@@ -19,7 +19,6 @@
       "name": "project",
       "image": "360118472363.dkr.ecr.us-west-2.amazonaws.com/laravel:latest",
       "essential": true,
-      "memory": 128,
       "mountPoints": [
         {
           "sourceVolume": "project",
@@ -57,7 +56,6 @@
       "name": "database",
       "image": "mysql:5.7",
       "essential": true,
-      "memory": 128,
       "portMappings": [
         {
           "hostPort": 3307,
@@ -87,7 +85,6 @@
       "name": "nginx-proxy",
       "image": "nginx",
       "essential": true,
-      "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
