@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25a8db91-433b-41f7-aa18-42d56a0e891f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.ebextensions/__00_test.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/__00_test.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ebextensions/__00_test.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/__00_test.config" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,10 +43,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.ebextensions/__00_test.conf">
+        <entry file="file://$PROJECT_DIR$/.ebextensions/__00_test.config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+            <state relative-caret-position="315">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/.ebextensions/test.config" />
         <option value="$PROJECT_DIR$/.ebextensions/00_test.config" />
         <option value="$PROJECT_DIR$/Dockerrun.aws.json" />
-        <option value="$PROJECT_DIR$/.ebextensions/__00_test.config" />
         <option value="$PROJECT_DIR$/.ebextensions/__00_test.conf" />
+        <option value="$PROJECT_DIR$/.ebextensions/__00_test.config" />
       </list>
     </option>
   </component>
@@ -286,7 +286,7 @@
       <workItem from="1566962435606" duration="23437000" />
       <workItem from="1567070364523" duration="4855000" />
       <workItem from="1567153373609" duration="30207000" />
-      <workItem from="1567356844007" duration="4703000" />
+      <workItem from="1567356844007" duration="4845000" />
     </task>
     <task id="LOCAL-00001" summary="bla">
       <created>1567356824311</created>
@@ -386,17 +386,24 @@
       <option name="project" value="LOCAL" />
       <updated>1567361460157</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="bla">
+      <created>1567361559759</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361559759</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75837000" />
+    <option name="totallyTimeSpent" value="75979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28081813" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28081813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -412,7 +419,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32832617" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002764" side_tool="true" weight="0.34012875" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4997236" weight="0.3390558" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4997236" visible="true" weight="0.3390558" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -514,10 +521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.ebextensions/__00_test.conf">
+    <entry file="file://$PROJECT_DIR$/.ebextensions/__00_test.config">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+        <state relative-caret-position="315">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
         </state>
       </provider>
     </entry>
