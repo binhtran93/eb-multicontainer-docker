@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="25a8db91-433b-41f7-aa18-42d56a0e891f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.ebextensions/__00_test.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/__00_test.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/Dockerrun.aws.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
-              <caret line="19" column="75" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="75" />
+              <caret line="19" column="75" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -37,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/.elasticbeanstalk/docker-compose.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -46,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/.ebextensions/__00_test.config">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -286,7 +287,7 @@
       <workItem from="1566962435606" duration="23437000" />
       <workItem from="1567070364523" duration="4855000" />
       <workItem from="1567153373609" duration="30207000" />
-      <workItem from="1567356844007" duration="4845000" />
+      <workItem from="1567356844007" duration="5422000" />
     </task>
     <task id="LOCAL-00001" summary="bla">
       <created>1567356824311</created>
@@ -393,11 +394,25 @@
       <option name="project" value="LOCAL" />
       <updated>1567361559759</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="bla">
+      <created>1567361706635</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361706635</updated>
+    </task>
+    <task id="LOCAL-00017" summary="bla">
+      <created>1567361925520</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1567361925520</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75979000" />
+    <option name="totallyTimeSpent" value="76556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -510,21 +525,21 @@
     <entry file="file://$PROJECT_DIR$/Dockerrun.aws.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
-          <caret line="19" column="75" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="75" />
+          <caret line="19" column="75" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.elasticbeanstalk/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.ebextensions/__00_test.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>
