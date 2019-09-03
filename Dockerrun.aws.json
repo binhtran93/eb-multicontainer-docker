@@ -31,7 +31,7 @@
       "name": "nginx-proxy",
       "image": "nginx",
       "essential": true,
-      "memory": 128,
+      "memory": 256,
       "portMappings": [
         {
           "hostPort": 80,
