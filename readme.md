@@ -26,10 +26,10 @@ Cấu trúc dự án sẽ có dạng như sau
      └── Dockerfile       
 ```   
 
-Tham khảo toàn bộ cấu trúc dự án ở đây https://github.com/binhtran93/eb-multicontainer-docker
+Tham khảo toàn bộ cấu trúc dự án ở [đây](https://github.com/binhtran93/eb-multicontainer-docker)
 
 # Tạo private image trên ECR
-Trước tiên ta sẽ tạo 1 private repository trên ECR sử Dockerfile trong thử mục docker
+Trước tiên ta sẽ tạo 1 private repository trên ECR sử dụng Dockerfile trong thư mục docker
 
 Nội dung Dockerfile
 ```
@@ -51,7 +51,7 @@ RUN chown -R www-data:www-data /var/www
  
 -  Login aws cli 
     ```
-    $(aws ecr get-login --no-include-email --region us-west-2 --profile tdbinh93)
+    $(aws ecr get-login --no-include-email --region us-west-2 --profile <your profile>)
     ```
 -  Tạo docker image từ docker/Dockerfile với tag laravel 
     ```
