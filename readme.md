@@ -67,7 +67,12 @@ RUN chown -R www-data:www-data /var/www
     ```
 
 # Config laravel và Nginx 
-Với thiết lập multicontainer cho EB, file Dockerrun.aws.json sẽ là bắt buộc, bên dưới sẽ là nội dung toàn bộ của file 
+Với thiết lập multicontainer cho EB, file Dockerrun.aws.json sẽ là bắt buộc, bên dưới sẽ là nội dung toàn bộ của file
+
+File config này sẽ 
+- Tạo 2 volume lần lượt tạo 2 volume và mount vào trong 2 container project và nginx-proxy
+- Export port 80 của container nginx-proxy 
+- Link container project với container nginx-proxy 
 ```
 {
   "AWSEBDockerrunVersion": 2,
@@ -153,13 +158,7 @@ Với thiết lập multicontainer cho EB, file Dockerrun.aws.json sẽ là bắ
 
 `links`: Các link container sẽ tìm được với nhau
 
-`portMappings`: Map port trong container với port của host 
-
-
-File config trên 
-- Tạo 2 volume lần lượt tạo 2 volume và mount vào trong 2 container project và nginx-proxy
-- Export port 80 của container nginx-proxy 
-- Link container project với container nginx-proxy 
+`portMappings`: Map port trong container với port của host  
 
 # Install thư viện và các lệnh cần thiết 
 Chúng ta vẫn cần phải chạy lệnh composer install, lệnh migrate và khởi chạy worker trong laravel 
