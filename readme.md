@@ -18,6 +18,9 @@ Cấu trúc dự án sẽ có dạng như sau
 ├── project
 │   ├── app
 │   └── public 
+│   └── etc
+|        └── supervisor.d
+|             └── laravel_worker.ini
 │   └── ...
 └── proxy
 │    └── conf.d
@@ -160,8 +163,8 @@ File config này sẽ
 
 `portMappings`: Map port trong container với port của host  
 
-# Install thư viện và các lệnh cần thiết 
-Chúng ta vẫn cần phải chạy lệnh composer install, lệnh migrate và khởi chạy worker trong laravel 
+# Install thư viện và chạy migrate 
+Chúng ta vẫn cần phải chạy lệnh composer install, lệnh migrate 
 
 Sẽ tạo 1 file `00_test.config` trong .ebxtensions
 ```
@@ -180,6 +183,47 @@ files:
       docker exec -i $DOCKER_ID chown -R www-data:www-data ./
       docker exec -i $DOCKER_ID composer install
       docker exec -i $DOCKER_ID php artisan migrate
+``` 
+
+# Khởi chạy laravel worker 
+Chúng ta sẽ sử dụng supervior để quản lý laravel worker process 
+Tạo thư mục etc trong thư mục project, xem trên [github](https://github.com/binhtran93/eb-multicontainer-docker/tree/master/project/etc) để thêm chi tiết 
+
+Nội dung file supervisor config 
+```
+[program:laravel_worker]
+command=php artisan queue:work --tries=3
+process_name=%(program_name)s_%(process_num)02d
+autostart=true
+autorestart=true
+numprocs=3
+priority = 900
+redirect_stderr=true
+stderr_logfile=%(here)s/../storage/logs/%(program_name)s.log
+stdout_logfile=%(here)s/../storage/logs/%(program_name)s.log
+
+```
+Với file config này, supervisor sẽ khởi tạo 3 process cho laravel worker
+
+Sau đó, sửa lại file 00_test.config như sau 
+```
+commands:
+  create_post_dir:
+    command: "mkdir /opt/elasticbeanstalk/hooks/appdeploy/post"
+    ignoreErrors: true
+files:
+  "/opt/elasticbeanstalk/hooks/appdeploy/post/99_laravel_deps.sh":
+    mode: "000755"
+    owner: root
+    group: root
+    content: |
+      #!/usr/bin/env bash
+      DOCKER_ID=`docker ps -q --filter 'ancestor=360118472363.dkr.ecr.us-west-2.amazonaws.com/laravel:latest'`
+      docker exec -i $DOCKER_ID chown -R www-data:www-data ./
+      docker exec -i $DOCKER_ID composer install
+      docker exec -i $DOCKER_ID php artisan migrate
+      
+      # Phần thêm vào để khởi động supervisor
       docker exec -i $DOCKER_ID supervisord
       docker exec -i $DOCKER_ID supervisorctl restart all
 ``` 
